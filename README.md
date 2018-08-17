@@ -60,8 +60,8 @@ Python software engineer pre-interview repository.
    <record_time>1008910273</record_time>
 </root>
 ```
-
  3. Response data format
+ 
 ```json
 [
     {
