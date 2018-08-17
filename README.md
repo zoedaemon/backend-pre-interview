@@ -11,10 +11,12 @@ Python software engineer pre-interview repository.
 
 ### Requirements
 
- 1. URLs
-    * API to **receive** the data => POST -- `/data`
-    * API to **display** the data => GET -- `/data/<id>`
- 2. Request data format
+#### 1. URLs
+
+  * API to **receive** the data => POST -- `/data`
+  * API to **display** the data => GET -- `/data/<id>`
+  
+#### 2. Request data format
  
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -60,7 +62,8 @@ Python software engineer pre-interview repository.
    <record_time>1008910273</record_time>
 </root>
 ```
- 3. Response data format
+
+#### 3. Response data format
  
 ```json
 [
