@@ -117,7 +117,7 @@ pipenv shell
 We use pytest as our unit test framework. Run the following command to do the test.
 
 ```shell
-pytest
+pipenv run pytest hedersgava
 ```
 
 ### Coding style tests
@@ -125,7 +125,7 @@ pytest
 Please follow the PEP8 standard as your basic coding style. But use 100 as your line length. And run the following command to do code style test.
 
 ```shell
-pylint
+pipenv run pylint hedersgava/hedersgava
 ```
 
 ## Built With
