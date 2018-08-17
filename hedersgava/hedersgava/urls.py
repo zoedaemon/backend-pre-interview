@@ -14,11 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from django.conf.urls import url, include
+from django.conf.urls import url
 from echo import views
 
-urlpatterns = [
+urlpatterns = [  # pylint: disable=invalid-name
     url(r'^echo/$', views.echo),
     url('admin/', admin.site.urls),
 ]
