@@ -11,6 +11,7 @@ hypothesis = "*"
 mypy = "*"
 pylint = "*"
 pytest-django = "*"
+pylint-django = "*"
 
 [dev-packages]
 
