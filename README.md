@@ -142,7 +142,7 @@ pipenv run pylint hedersgava/hedersgava
 
 ## Authors
 
-* **Linnovs** - *Initial work* - [linnovs47](https://github.com/linnvos47)
+* **Linnovs** - *Initial work* - [linnovs47](https://github.com/linnovs47)
 * **Andy** - *Initial work* - [EntrakAndyLam](https://github.com/EntrakAndyLam)
 
 See also the list of [contributors](https://github.com/en-trak/backend-pre-interview/contributors) who participated in this project.
