@@ -1,5 +1,5 @@
 # Hedersgåva
-Python software engineer pre-interview repository.
+Python software engineer pre-interview repository. Please [fork][fork_from_github] this repository to your own GitHub accounts. You can create one using this [link][create_account].
 
 ## Targets
 
@@ -150,3 +150,5 @@ See also the list of [contributors](https://github.com/en-trak/backend-pre-inter
 [pipenv]:https://docs.pipenv.org/
 [pyenv]:https://github.com/pyenv/pyenv
 [instal_via_pipenv]:images/install_via_pipenv.svg
+[fork_from_github]:https://github.com/en-trak/backend-pre-interview/fork
+[create_account]:https://github.com/join
