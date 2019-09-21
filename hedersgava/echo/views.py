@@ -13,3 +13,4 @@ def echo(request):
         if data:
             return response(data, status=200, content_type=request.content_type)
         return response(status=status.HTTP_400_BAD_REQUEST)
+            

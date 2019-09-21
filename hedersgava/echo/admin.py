@@ -1,5 +1,5 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import DeviceType
-admin.site.register(DeviceType)
+from .models import DeviceType, DeviceTypeAdmin
+admin.site.register(DeviceType, DeviceTypeAdmin)
