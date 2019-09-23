@@ -2,11 +2,11 @@
 Hedersgåva serializers
 """
 from rest_framework import serializers
-from .models import DeviceType
+from .models import DeviceType, DeviceRecords
 
 class DeviceTypeSerializer(serializers.ModelSerializer):
     """
-    json serializers
+    json serializers for DeviceType
     id = serializers.IntegerField(read_only=True)
     name = serializers.CharField(required=False, allow_blank=True, max_length=100)
     unit = serializers.CharField(required=False, allow_blank=True, max_length=20)
@@ -17,4 +17,12 @@ class DeviceTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = DeviceType
         fields = ['id', 'name', 'unit']
-    
+
+class DeviceRecordsSerializer(serializers.ModelSerializer):
+    """
+    json serializers for DeviceRecords
+    """
+    class Meta:
+        model = DeviceRecords
+        fields = ['record_time', 'id_input', 'devices_id', 'devices_type',
+                  'value']
