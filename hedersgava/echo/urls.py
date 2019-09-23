@@ -5,6 +5,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [# pylint: disable=invalid-name
-    path('', views.echo, name='index'),
-    #path('<int:question_id>/', views.detail, name='detail'),
+    path('data/', views.echo, name='data store'),
+    path('data/<int:filter_timestamp>/', views.echo_filter, name='detail'),
 ]
