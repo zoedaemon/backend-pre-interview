@@ -15,12 +15,12 @@ def echo(request):
     """
     Request json data and return it
     """
-    if request.method == 'GET':
+    if request.method == 'POST':
         #serialize = DeviceTypeSerializer( DeviceType.objects.get(unit='V') )
         dtset = DeviceType.objects.all()
         serialize = DeviceTypeSerializer(dtset, many=True)
         if serialize:
-            hedersgavaxml.XMLParser.parse('olla')
+            hedersgavaxml.XMLParser.parse(request.body)
             return response(serialize.data, status=200, content_type=request.content_type)
         return response(status=status.HTTP_400_BAD_REQUEST)
     return None
@@ -39,6 +39,7 @@ def echo_filter(request, filter_timestamp):
         dt_value = local_tz.normalize(utc_dt.astimezone(local_tz))
         dt_value = dt_value.strftime('%Y-%m-%dT%H:%M:%SZ')
         print(dt_value)
+        #TODO: exception handling if objects not found
         dtset = DeviceRecords.objects.filter(record_time=dt_value)#.union()
         #dtset = DeviceRecords.objects.all()
         serialize = DeviceRecordsSerializer(dtset, many=True)
