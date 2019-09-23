@@ -18,7 +18,7 @@ class DeviceTypeSerializer(serializers.ModelSerializer):
         model = DeviceType
         fields = ['id', 'name', 'unit']
     def __str__(self):
-        return self.name
+        return self.name # pylint: disable=no-member
 
 class DeviceRecordsSerializer(serializers.ModelSerializer):
     """

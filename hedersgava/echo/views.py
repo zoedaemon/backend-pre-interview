@@ -6,7 +6,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response as response
 import pytz
-from modules import hedersgavaxml
+from modules import hedersgavaxml # pylint: disable=import-error
 from .models import DeviceType, DeviceRecords
 from .serializers import DeviceTypeSerializer, DeviceRecordsSerializer
 
