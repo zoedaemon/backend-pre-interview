@@ -8,7 +8,7 @@ from modules import hedersgavaxml
 from .models import DeviceType
 from .serializers import DeviceTypeSerializer
 
-@api_view(['POST'])
+@api_view(['GET'])
 def echo(request):
     """
     Request json data and return it
