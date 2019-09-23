@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url
-from echo import views
+from django.urls import include
+#from rest_framework import routers
+#from echo import views
 
 urlpatterns = [  # pylint: disable=invalid-name
-    url(r'^echo/$', views.echo),
-    url('admin/', admin.site.urls),
+    #url(r'^echo/$', views.echo),
+    url(r'', include('echo.urls')),
+    url('admin/', admin.site.urls, name='admin'),
 ]
