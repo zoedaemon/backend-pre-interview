@@ -4,9 +4,9 @@ Hedersgåva views
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response as response
+from modules import hedersgavaxml  
 from .models import DeviceType
 from .serializers import DeviceTypeSerializer
-from modules import HedersgavaXMLParser
 
 @api_view(['POST'])
 def echo(request):
@@ -18,7 +18,7 @@ def echo(request):
         dtset = DeviceType.objects.all()
         serialize = DeviceTypeSerializer(dtset, many=True)
         if serialize:
-            HedersgavaXMLParser.parse('olla')
+            hedersgavaxml.XMLParser.parse('olla')
             return response(serialize.data, status=200, content_type=request.content_type)
         return response(status=status.HTTP_400_BAD_REQUEST)
     return None

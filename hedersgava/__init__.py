@@ -1,1 +1,1 @@
-import modules/HedersgavaXMLParser as HedersgavaXMLParser
+import modules/hedersgavaxml.py as hedersgavaxml

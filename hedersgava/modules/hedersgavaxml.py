@@ -18,7 +18,7 @@ Hedersgåva xml parser; valid input format :
    <record_time> RECORD_TIME </record_time>
 </root>
 """
-class HedersgavaXMLParser(object):
+class XMLParser(object):
     """
        class custom parser for Hedersgåva input requirements
     """
