@@ -18,10 +18,23 @@ Hedersgåva xml parser; valid input format :
    <record_time> RECORD_TIME </record_time>
 </root>
 """
+import xml.etree.ElementTree as ET 
+
 class XMLParser(object):
     """
        class custom parser for Hedersgåva input requirements
     """
     @staticmethod
     def parse(xml_data):
-        print ("imported")
+        # create element tree object 
+        tree = ET.ElementTree(ET.fromstring(xml_data)) 
+        #print (xml_data)
+        # get root element 
+        root = tree.getroot()
+        # create empty list for news items 
+        elements = [] 
+        # iterate throught element 
+        for elem in root.findall('./data/element'):
+            # iterate child elements of item 
+            for child in elem: 
+                print (child.text.encode('utf8'))

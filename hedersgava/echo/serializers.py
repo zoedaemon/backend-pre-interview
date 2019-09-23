@@ -17,11 +17,14 @@ class DeviceTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = DeviceType
         fields = ['id', 'name', 'unit']
+    def __str__(self):
+        return self.name
 
 class DeviceRecordsSerializer(serializers.ModelSerializer):
     """
     json serializers for DeviceRecords
     """
+    #owner = PrimaryKeyRelatedField(queryset=User.objects.all())
     class Meta:
         model = DeviceRecords
         fields = ['record_time', 'id_input', 'devices_id', 'devices_type',

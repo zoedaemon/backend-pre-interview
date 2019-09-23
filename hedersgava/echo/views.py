@@ -15,12 +15,12 @@ def echo(request):
     """
     Request json data and return it
     """
-    if request.method == 'GET':
+    if request.method == 'POST':
         #serialize = DeviceTypeSerializer( DeviceType.objects.get(unit='V') )
         dtset = DeviceType.objects.all()
         serialize = DeviceTypeSerializer(dtset, many=True)
         if serialize:
-            hedersgavaxml.XMLParser.parse('olla')
+            hedersgavaxml.XMLParser.parse(request.body)
             return response(serialize.data, status=200, content_type=request.content_type)
         return response(status=status.HTTP_400_BAD_REQUEST)
     return None
