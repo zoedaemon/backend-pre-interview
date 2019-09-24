@@ -7,7 +7,7 @@ name = "pypi"
 django = "*"
 djangorestframework = "*"
 pytest = "*"
-hypothesis = "*"
+hypothesis = {version = "*",extras = ["django_db"]}
 mypy = "*"
 pylint = "*"
 pytest-django = "*"
