@@ -35,6 +35,8 @@ class XMLParser(object):#pylint: disable=useless-object-inheritance
         #print (xml_data)
         # get root element
         root = tree.getroot()
+        #list of record
+        input_record = []
         # create empty list for news items
         elements = defaultdict(list)
         # iterate throught element
@@ -48,7 +50,7 @@ class XMLParser(object):#pylint: disable=useless-object-inheritance
                     #print (device)
                 elif child.tag == "value":
                     #save to elements
-                    elements[device] = child.text#.encode('utf8')
+                    elements[device].append(child.text)#.encode('utf8')
                     #print (elements[device])
                 #else:
                 #    None# TODO : raise error
@@ -61,4 +63,11 @@ class XMLParser(object):#pylint: disable=useless-object-inheritance
         for elem in root.findall('./devices'):
             for child in elem:
                 if elements[child.tag] is not None:
-                    print(elements[child.tag])
+                    elements[child.tag].append(child.text)
+                    #print(elements[child.tag])
+        #store input record to the input_record list
+        input_record.append(root.find('./id').text)
+        input_record.append(root.find('./record_time').text)
+        input_record.append(elements)
+        print(input_record)
+        return input_record
